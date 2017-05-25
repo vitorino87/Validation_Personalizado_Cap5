@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Digite uma data entre 10/10/2010 e 11/11/2011: " for="data1"/>
+            <h:inputText id="data1" value="#{exemploMB.data.str}"
+                         required="true">
+                <f:validator validatorId="dataValidator"/>
+                <f:attribute name="inicio" value="10/10/2010"/>
+                <f:attribute name="fim" value="11/11/2011"/>
+            </h:inputText>
+            <h:commandButton value="Enviar"/>
+        </h:form>
+    </h:body>
+</html>
+
